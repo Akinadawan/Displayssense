@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DisplaySense AI</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+    h1 { text-align: center; color: #333; }
+    .container { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .upload-section, .result-section, .suggestion-section { margin-top: 20px; }
+    button { background-color: #3a86ff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #265df2; }
+    .score { font-size: 18px; margin-top: 10px; }
+    .suggestions { margin-top: 10px; }
+  </style>
+</head>
+<body>  <h1>DisplaySense AI</h1>  <div class="container">
+    <div class="upload-section">
+      <h2>Upload Your Display Photo</h2>
+      <input type="file" accept="image/*">
+      <button onclick="analyzeDisplay()">Analyze Display</button>
+    </div><div class="result-section" id="results" style="display:none;">
+  <h2>AI Display Analysis</h2>
+  <div class="score">Balance: 8/10</div>
+  <div class="score">Color Harmony: 7/10</div>
+  <div class="score">Focal Point: 9/10</div>
+  <div class="score">Product Visibility: 8/10</div>
+</div>
+
+<div class="suggestion-section" id="suggestions" style="display:none;">
+  <h2>Suggestions</h2>
+  <div class="suggestions">
+    - Move bright-colored items towards the center for better focus.<br>
+    - Add a contrasting element on the right side to balance empty space.<br>
+    - Enhance lighting on lower shelves.
+  </div>
+</div>
+
+  </div>  <script>
+    function analyzeDisplay() {
+      document.getElementById('results').style.display = 'block';
+      document.getElementById('suggestions').style.display = 'block';
+    }
+  </script></body>
+</html>Add DisplaySense AI prototype
